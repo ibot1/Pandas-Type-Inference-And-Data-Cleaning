@@ -3,17 +3,8 @@ Type Inference And Data Cleaning
 This repository provides an automated dynamic custom rule base type inference and data cleansing functionalities.
 
 Supported Data-Type Mapping Flow
-|-------------|----------------------------|----------------------------------------------------------------------|---------------------------------------------------|
-|Pandas dtype |Custom Type	           | NumPy type                                                           | Description                                       |
-|object	      |str or mixed	           |string_, unicode_, mixed types	                                  |Text or mixed numeric and non-numeric values       |
-|int64	      |int	                   |int_, int8, int16, int32, int64, uint8, uint16, uint32, uint64        |Integer numbers                                    |
-|float64      |float	                   |float_, float16, float32, float64	                                  |Floating point numbers                             |
-|bool	      |bool	                   |bool_	                                                          |True/False values                                  |
-|datetime64   |NA	                   |datetime64[ns]	                                                  |Date and time values                               |
-|timedelta[ns]|NA	                   |NA	                                                                  |Differences between two datetimes                  |
-|category     |NA	                   |NA	                                                                  |Finite list of text values                         |
-|Complex      |NA                          |NA                                                                    |Representing complex numbers                       |
-|NA           |User-Defined                |NA                                                                    |User defined type using a regex rule               |
+---------------------------------
+The data-types can be [found here](https://pandas.pydata.org/docs/reference/arrays.html).
 
 Frontend:
 -----------
