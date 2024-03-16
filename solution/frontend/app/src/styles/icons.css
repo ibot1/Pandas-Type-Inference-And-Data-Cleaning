@@ -1,0 +1,11 @@
+
+.next-icon {
+  height: 2.5em;
+  width: 2.5em;
+  fill: blue;
+}
+
+.next-icon:hover {
+  fill: #90EE90;
+  cursor: pointer;
+}

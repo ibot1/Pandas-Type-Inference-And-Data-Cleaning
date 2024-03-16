@@ -1,0 +1,38 @@
+{
+	"Score": {
+		"p_type": "int64",
+		"a_type": "int",
+		"r_match": "^(\\d+)$",
+		"in": [],
+		"o_prefix": "",
+		"o_delimiter": "",
+		"o_suffix": ""
+	},
+	"Birthdate": {
+		"p_type": "datetime64",
+		"a_type": "date",
+		"r_match": "^(\\d+)/(\\d+)/(\\d+)$",
+		"in": [],
+		"o_prefix": "",
+		"o_delimiter": "-",
+		"o_suffix": ""
+	},
+	"Name": {
+		"p_type": "object",
+		"a_type": "string",
+		"r_match": "^([aA-zZ]+)$",
+		"in": [],
+		"o_prefix": "",
+		"o_delimiter": "",
+		"o_suffix": ""
+	},
+	"Grade": {
+		"p_type": "category",
+		"a_type": "category",
+		"r_match": "(.*)",
+		"in": ["A", "B", "C"],
+		"o_prefix": "",
+		"o_delimiter": "",
+		"o_suffix": ""
+	}
+}
