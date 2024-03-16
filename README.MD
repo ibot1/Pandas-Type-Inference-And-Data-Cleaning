@@ -4,16 +4,16 @@ This repository provides an automated dynamic custom rule base type inference an
 
 Supported Data-Type Mapping Flow
 -----------------------------------------------------------------------------------------------------------------------------------------
-Pandas dtype |Custom Type	         | NumPy type                                                   | Description
-object	     |str or mixed	         |string_, unicode_, mixed types	                            |Text or mixed numeric and non-numeric values
-int64	     |int	                 |int_, int8, int16, int32, int64, uint8, uint16, uint32, uint64|Integer numbers
-float64	     |float	                 |float_, float16, float32, float64	                            |Floating point numbers
-bool	     |bool	                 |bool_	                                                        |True/False values
-datetime64   |NA	                 |datetime64[ns]	                                            |Date and time values
-timedelta[ns]|NA	                 |NA	                                                        |Differences between two datetimes
-category	 |NA	                 |NA	                                                        |Finite list of text values
-Complex      |NA                     |NA                                                            | Representing complex numbers
-NA           |User-Defined           |NA                                                            |User defined type using a regex rule
+Pandas dtype |Custom Type	         | NumPy type                                                          | Description<br>
+object	     |str or mixed	         |string_, unicode_, mixed types	                               |Text or mixed numeric and non-numeric values<br>
+int64	     |int	                 |int_, int8, int16, int32, int64, uint8, uint16, uint32, uint64       |Integer numbers<br>
+float64	     |float	                 |float_, float16, float32, float64	                               |Floating point numbers<br>
+bool	     |bool	                 |bool_	                                                               |True/False values<br>
+datetime64   |NA	                 |datetime64[ns]	                                               |Date and time values<br>
+timedelta[ns]|NA	                 |NA	                                                               |Differences between two datetimes<br>
+category     |NA	                 |NA	                                                               |Finite list of text values<br>
+Complex      |NA                         |NA                                                                   |Representing complex numbers<br>
+NA           |User-Defined               |NA                                                                   |User defined type using a regex rule<br>
 
 Frontend:
 -----------
