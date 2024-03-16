@@ -4,3 +4,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+h1 {
+  text-align: center;
+  margin-top: 10vh;
+  text-decoration: underline;
+}

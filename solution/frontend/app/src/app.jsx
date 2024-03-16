@@ -2,6 +2,7 @@ import axios from "axios";
 import "./styles/app.css";
 import { useState } from "react";
 import DataTable from "./components/data_table";
+import ExpandTable from "./components/expand_table";
 import FileUpload from "./components/file_upload";
 
 const apiClient = axios.create({
@@ -46,7 +47,7 @@ export default function App() {
 	  Object.values(ruleOpts).forEach(ruleOpt => {
 		  ruleConfig[ruleOpt[0]] = {
 			  "p_type": ruleOpt[1], "a_type": ruleOpt[2],
-			  "r_match": ruleOpt[3], "in": ruleOpt[4].split(","),
+			  "r_match": ruleOpt[3], "in": ruleOpt[4].split(",").map(e => e.trim()).filter(e => e != ''),
 			  "o_prefix": ruleOpt[5], "o_delimiter": ruleOpt[6], "o_suffix": ruleOpt[7]
 		  };
 	  });
@@ -56,19 +57,23 @@ export default function App() {
   const ruleCallBack = (ruleOpts) => {
 	  const ruleConfig = prepareRuleConfig(ruleOpts);
 	  const ruleFile = new Blob([JSON.stringify(ruleConfig)], {type: "application/json"});
+	  console.log(ruleConfig);
 	  makeApiRequest(state.data, ruleFile)
 		.then(({data}) => {
 			const link = document.getElementById("download");
 			link.href = URL.createObjectURL(data); link.click();
-			setState({"stage": 0, "data": null, "ruleCols": [], "result": []});
+			data.text().then(content => {
+				setState({...state, "stage": 2, "result": JSON.parse(content)});
+			});
 	  });
   }
   
   return (
 	<>
 		<a id = "download" download = "result.json" hidden> </a>
-	    <FileUpload  hidden = {state.stage != 0} callBack = {dataCallBack}/>
+		<FileUpload  hidden = {state.stage != 0} callBack = {dataCallBack}/>
 		<DataTable hidden = {state.stage != 1} data = {getRuleData} callBack = {ruleCallBack}/>
+		<ExpandTable hidden = {state.stage != 2} rowData = {() => state["result"]} colData = {() => state["ruleCols"]}/>
 	</> 
   );
 };

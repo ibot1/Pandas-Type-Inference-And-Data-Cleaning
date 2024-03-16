@@ -27,9 +27,9 @@ export default function FileUpload(props) {
 	
 	return (
 		<div hidden = {hidden}>
+			<h1>Upload Data File</h1>
 			<div className="container">
 			  <div className="card">
-				<h3>Upload Data File</h3>
 				<div className="drop_box">
 				  <header>
 					<h4>Select File here</h4>

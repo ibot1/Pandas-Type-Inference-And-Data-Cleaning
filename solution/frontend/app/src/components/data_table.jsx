@@ -1,5 +1,5 @@
 import "../styles/data_table.css";
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import NextIcon from "../icons/next_icon";
 
 export default function DataTable(props) {
@@ -30,15 +30,16 @@ export default function DataTable(props) {
   
   return (
 	<div hidden = {hidden}>
-		<div className = "next-btn" onClick={onClick}> <NextIcon/> </div>
-		<table>
+		<h1> Configure Type Inference And Extraction Rules </h1>
+		<div className = "data-table-next-btn" onClick={onClick}> <NextIcon/> </div>
+		<table className = "data-table">
 			<tbody>
 			{
 				data().entries().toArray().map(([rowKey, rowVal]) => (		
-					<tr key = {`row-${rowKey}`}>
+					<tr className = "data-table-row" key = {`row-${rowKey}`}>
 						{rowVal.entries().toArray().map(([colKey, colVal]) => 
-							(<th key = {`row-${rowKey}-col-${colKey}`}>
-								{rowKey == 0 ? colVal: <input className = "table-input" type = "text" placeholder = '""' defaultValue = {compute(rowKey, colKey, colVal)} onChange={e => onChange(e, rowKey, colKey)}/>}
+							(<th className = "data-table-col" key = {`row-${rowKey}-col-${colKey}`}>
+								{rowKey == 0 ? colVal: <input className = "data-table-input" type = "text" placeholder = '""' defaultValue = {compute(rowKey, colKey, colVal)} onChange={e => onChange(e, rowKey, colKey)}/>}
 							</th>
 						))}
 					</tr>
