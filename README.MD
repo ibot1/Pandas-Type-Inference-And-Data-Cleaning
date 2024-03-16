@@ -3,17 +3,17 @@ Type Inference And Data Cleaning
 This repository provides an automated dynamic custom rule base type inference and data cleansing functionalities.
 
 Supported Data-Type Mapping Flow
------------------------------------------------------------------------------------------------------------------------------------------
-Pandas dtype |Custom Type	         | NumPy type                                                          | Description<br>
-object	     |str or mixed	         |string_, unicode_, mixed types	                               |Text or mixed numeric and non-numeric values<br>
-int64	     |int	                 |int_, int8, int16, int32, int64, uint8, uint16, uint32, uint64       |Integer numbers<br>
-float64	     |float	                 |float_, float16, float32, float64	                               |Floating point numbers<br>
-bool	     |bool	                 |bool_	                                                               |True/False values<br>
-datetime64   |NA	                 |datetime64[ns]	                                               |Date and time values<br>
-timedelta[ns]|NA	                 |NA	                                                               |Differences between two datetimes<br>
-category     |NA	                 |NA	                                                               |Finite list of text values<br>
-Complex      |NA                         |NA                                                                   |Representing complex numbers<br>
-NA           |User-Defined               |NA                                                                   |User defined type using a regex rule<br>
+|-------------|----------------------------|----------------------------------------------------------------------|---------------------------------------------------|
+|Pandas dtype |Custom Type	           | NumPy type                                                           | Description                                       |
+|object	      |str or mixed	           |string_, unicode_, mixed types	                                  |Text or mixed numeric and non-numeric values       |
+|int64	      |int	                   |int_, int8, int16, int32, int64, uint8, uint16, uint32, uint64        |Integer numbers                                    |
+|float64      |float	                   |float_, float16, float32, float64	                                  |Floating point numbers                             |
+|bool	      |bool	                   |bool_	                                                          |True/False values                                  |
+|datetime64   |NA	                   |datetime64[ns]	                                                  |Date and time values                               |
+|timedelta[ns]|NA	                   |NA	                                                                  |Differences between two datetimes                  |
+|category     |NA	                   |NA	                                                                  |Finite list of text values                         |
+|Complex      |NA                          |NA                                                                    |Representing complex numbers                       |
+|NA           |User-Defined                |NA                                                                    |User defined type using a regex rule               |
 
 Frontend:
 -----------
@@ -57,8 +57,8 @@ Optimizations/Future Work Maybe:
 - Backend adding information (meta-data) on which cells (column/row) broke the matching rules. And how the users can jump
   to the errors.
   
-Installation:
-------------
+Installation And Running:
+------------------------
 - git clone the repository or download its files.
 - Install the latest python [version](https://www.python.org/downloads/)
 - Get a terminal an execute the below;
@@ -75,3 +75,8 @@ Installation:
      npm run dev	 
   ```
 - Click this [link](http://localhost:5173/) to launch the UI.
+
+
+Demo Vide
+----------
+Here is the [demo video link](https://1drv.ms/v/s!AhUZZDWWJbplhJ0TRHkclejdrcvDYw)
