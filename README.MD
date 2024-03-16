@@ -68,6 +68,6 @@ Installation And Running:
 - Click this [link](http://localhost:5173/) to launch the UI.
 
 
-Demo Vide
-----------
+Demo Video
+--------------
 Here is the [demo video link](https://1drv.ms/v/s!AhUZZDWWJbplhJ0TRHkclejdrcvDYw)
